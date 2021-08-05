@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <form method="GET">
+      Nombre:
+      <input type="text" name="nombre" />
+      <input type="submit" name="Buscar" />
+    </form>
+    <h2>Resultado</h2>
+
+    <!--Busqueda-->
+    <script type="application/javascript">
+    var busqueda = new URLSerachParams(document.location.search);
+    if (busqueda.has("nombre")){
+        document.getElementById("resultado").innerHTML = "Resultado: " + busqueda.get("nombre")
+    }
+    </script>
+        <!-- Fin Busqueda-->
+
+  </body>
+</html>
